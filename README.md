@@ -2,4 +2,4 @@
 
 Frontendchallenge.io challenge.
 
-Creating a tip calculator appwith the provided design.
+Creating a tip calculator app with the provided design.
