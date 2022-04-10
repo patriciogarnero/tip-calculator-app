@@ -1,0 +1,157 @@
+:root {
+    --strong-cyan: hsl(172, 67%, 45%);
+    --very-dark-cyan: hsl(183, 100%, 15%);
+    --grayish-cyan: hsl(184, 14%, 56%);
+    --light-grayish-cyan: hsl(185, 41%, 84%);
+    --very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+}
+
+html {
+    font-size: 24px;
+}
+
+body {
+    font-family: 'Space Mono', monospace;
+    background-color: var(--light-grayish-cyan);
+}
+
+main {
+    height: 90vh;
+}
+
+.container {
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+.margin {
+    margin-top: 30px;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    margin: 50px auto;
+}
+
+.calculator {
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 40px 30px;
+}
+
+.label {
+    color: var(--grayish-cyan);
+    display: block;
+    font-size: 0.7rem;
+    margin-bottom: 10px;
+
+}
+
+.input {
+    display: block;
+    box-sizing: border-box;
+    background-color: var(--very-light-grayish-cyan);
+    border: 0;
+    width: 100%;
+    border-radius: 5px;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.9rem;
+    color: var(--very-dark-cyan);
+    text-align: right;
+    padding: 10px 20px;
+}
+
+.position {
+    position: relative;
+}
+
+.dollar::before {
+    content: " ";
+    height: 30px;
+    width: 30px;
+    background-image: url("./images/icon-dollar.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 45%;
+    position: absolute;
+    top: 45px;
+    left: 16px;
+    color: var(--light-grayish-cyan);
+    font-family: 'Space Mono', monospace;
+}
+
+.input:focus {
+    outline: none;
+}
+
+#id-select-tip {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px 20px;
+}
+
+
+#id-select-tip input[type="checkbox"] {
+    display: none;
+}
+
+#id-select-tip span {
+    display: inline-block;
+    width: 130px;
+    padding: 10px;
+    border-radius: 5px;
+    color: var(--white);
+    background-color: var(--very-dark-cyan);
+    text-align: center;
+}
+
+#id-select-tip input[type="checkbox"]:checked+span {
+    background-color: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+}
+
+.person::before {
+    content: " ";
+    height: 30px;
+    width: 30px;
+    background-image: url("./images/icon-person.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 45%;
+    position: absolute;
+    top: 45px;
+    left: 16px;
+    color: var(--light-grayish-cyan);
+    font-family: 'Space Mono', monospace;
+}
+
+.form-control.error .input-num {
+    border: solid 1px red;
+}
+
+.form-control.error .label-num::after {
+    content: "Can't be zero";
+    color: red;
+    font-size: 0.5rem;
+    margin-left: 60px;
+}
+
+.form-control.success .input {
+    border: solid 2px var(--strong-cyan);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
