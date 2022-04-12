@@ -1,72 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | Tip calculator app</title>
 
-  <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
 
-  <link rel="stylesheet" href="./styles.css">
-
-</head>
-
-<body>
-
-  <main class="center">
-    <div class="container center">
-      <img class="logo" src="./images/logo.svg" alt="logo">
-      <div class="calculator">
-        <div class="calculation-container">
-          <form class="form-control" action="/">
-            <div class="position">
-              <label class="label" for="bill">Bill</label>
-              <span class="dollar"><input class="input" type="text" name="bill"></span>
-            </div>
-            <label class="label margin" for="select-tip">Select Tip %</label>
-            <div id="id-select-tip">
-              <label><input type="checkbox" name="select-tip" value="5"><span>5%</span></label>
-              <label><input type="checkbox" name="select-tip" value="10"><span>10%</span></label>
-              <label><input type="checkbox" name="select-tip" value="15"><span>15%</span></label>
-              <label><input type="checkbox" name="select-tip" value="25"><span>25%</span></label>
-              <label><input type="checkbox" name="select-tip" value="50"><span>50%</span></label>
-              <input class="input" name="select-tip" type="number" placeholder="Custom">
-            </div>
-            <div class="position">
-              <label class="label margin label-num" for="numer-of-people">Number of People</label>
-              <span class="person"><input class="input input-num" type="number"></span>
-            </div>
-          </form>
-        </div>
-        <div class="result-container">
-          <div class="tip-per-person">
-            <h6>Tip Amount</h6>
-            <p>/ person</p>
+  <body>
+    <main class="center">
+      <div class="container center">
+        <img class="logo" src="./images/logo.svg" alt="logo" />
+        <div class="calculator">
+          <div class="calculation-container">
+            <form class="form-control" action="/">
+              <div class="position">
+                <label class="label" for="bill">Bill</label>
+                <span class="dollar"
+                  ><input class="input" type="text" name="bill"
+                /></span>
+              </div>
+              <label class="label margin-top" for="select-tip"
+                >Select Tip %</label
+              >
+              <div id="id-select-tip">
+                <label
+                  ><input type="radio" name="select-tip" value="5" /><span
+                    >5%</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="select-tip" value="10" /><span
+                    >10%</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="select-tip" value="15" /><span
+                    >15%</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="select-tip" value="25" /><span
+                    >25%</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="select-tip" value="50" /><span
+                    >50%</span
+                  ></label
+                >
+                <input
+                  class="input"
+                  name="select-tip"
+                  type="number"
+                  placeholder="Custom"
+                />
+              </div>
+              <div class="position">
+                <label class="label margin-top label-num" for="numer-of-people"
+                  >Number of People</label
+                >
+                <span class="person"
+                  ><input class="input input-num" type="number"
+                /></span>
+              </div>
+            </form>
           </div>
-          <div class="tip-total">
-            <h6>Total</h6>
-            <p>/ person</p>
+          <div class="result-container position">
+            <div class="margin-bottom">
+              <h6 class="tip-heading">Tip Amount</h6>
+              <p class="tip-paragraph">/ person</p>
+              <span class="result1">$ 4.24</span>
+            </div>
+            <div class="margin-bottom position">
+              <h6 class="tip-heading">Total</h6>
+              <p class="tip-paragraph">/ person</p>
+              <span class="result2">$ 4.24</span>
+            </div>
+            <form action="/">
+              <button class="reset-button" type="submit">RESET</button>
+            </form>
           </div>
-          <form action="/">
-            <button type="submit">RESET</button>
-          </form>
         </div>
       </div>
-    </div>
-  </main>
-  <footer>
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="https://github.com/patriciogarnero">Patricio Garnero</a>.
-    </div>
-  </footer>
-</body>
-
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://github.com/patriciogarnero">Patricio Garnero</a>.
+      </div>
+    </footer>
+  </body>
 </html>

@@ -1,157 +1,213 @@
 :root {
-    --strong-cyan: hsl(172, 67%, 45%);
-    --very-dark-cyan: hsl(183, 100%, 15%);
-    --grayish-cyan: hsl(184, 14%, 56%);
-    --light-grayish-cyan: hsl(185, 41%, 84%);
-    --very-light-grayish-cyan: hsl(189, 41%, 97%);
-    --white: hsl(0, 0%, 100%);
+  --strong-cyan: hsl(172, 67%, 45%);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
 }
 
 html {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 body {
-    font-family: 'Space Mono', monospace;
-    background-color: var(--light-grayish-cyan);
+  font-family: "Space Mono", monospace;
+  background-color: var(--light-grayish-cyan);
 }
 
 main {
-    height: 90vh;
+  height: 90vh;
 }
 
 .container {
-    max-width: 400px;
-    box-sizing: border-box;
+  max-width: 400px;
+  box-sizing: border-box;
 }
 
-.margin {
-    margin-top: 30px;
+.margin-top {
+  margin-top: 30px;
 }
-
+.margin-bottom {
+  margin-bottom: 20px;
+}
 .center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .logo {
-    margin: 50px auto;
+  margin: 50px auto;
 }
 
 .calculator {
-    background-color: var(--white);
-    border-radius: 20px;
-    padding: 40px 30px;
+  background-color: var(--white);
+  border-radius: 20px;
+  padding: 40px 30px;
 }
 
 .label {
-    color: var(--grayish-cyan);
-    display: block;
-    font-size: 0.7rem;
-    margin-bottom: 10px;
-
+  color: var(--grayish-cyan);
+  display: block;
+  font-size: 0.7rem;
+  margin-bottom: 10px;
 }
 
 .input {
-    display: block;
-    box-sizing: border-box;
-    background-color: var(--very-light-grayish-cyan);
-    border: 0;
-    width: 100%;
-    border-radius: 5px;
-    font-family: 'Space Mono', monospace;
-    font-size: 0.9rem;
-    color: var(--very-dark-cyan);
-    text-align: right;
-    padding: 10px 20px;
+  display: block;
+  box-sizing: border-box;
+  background-color: var(--very-light-grayish-cyan);
+  border: 0;
+  width: 100%;
+  border-radius: 5px;
+  font-family: "Space Mono", monospace;
+  font-size: 0.9rem;
+  color: var(--very-dark-cyan);
+  text-align: right;
+  padding: 10px 20px;
 }
 
 .position {
-    position: relative;
+  position: relative;
 }
 
 .dollar::before {
-    content: " ";
-    height: 30px;
-    width: 30px;
-    background-image: url("./images/icon-dollar.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 45%;
-    position: absolute;
-    top: 45px;
-    left: 16px;
-    color: var(--light-grayish-cyan);
-    font-family: 'Space Mono', monospace;
+  content: " ";
+  height: 30px;
+  width: 30px;
+  background-image: url("./images/icon-dollar.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 45%;
+  position: absolute;
+  top: 45px;
+  left: 16px;
+  color: var(--light-grayish-cyan);
+  font-family: "Space Mono", monospace;
 }
 
 .input:focus {
-    outline: none;
+  outline: none;
 }
 
 #id-select-tip {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 20px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 20px 20px;
 }
 
-
-#id-select-tip input[type="checkbox"] {
-    display: none;
+#id-select-tip input[type="radio"] {
+  display: none;
 }
 
 #id-select-tip span {
-    display: inline-block;
-    width: 130px;
-    padding: 10px;
-    border-radius: 5px;
-    color: var(--white);
-    background-color: var(--very-dark-cyan);
-    text-align: center;
+  display: inline-block;
+  width: 130px;
+  padding: 10px;
+  border-radius: 5px;
+  color: var(--white);
+  background-color: var(--very-dark-cyan);
+  text-align: center;
+  cursor: pointer;
 }
 
-#id-select-tip input[type="checkbox"]:checked+span {
-    background-color: var(--strong-cyan);
-    color: var(--very-dark-cyan);
+#id-select-tip input[type="radio"]:checked + span {
+  background-color: var(--strong-cyan);
+  color: var(--very-dark-cyan);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 .person::before {
-    content: " ";
-    height: 30px;
-    width: 30px;
-    background-image: url("./images/icon-person.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 45%;
-    position: absolute;
-    top: 45px;
-    left: 16px;
-    color: var(--light-grayish-cyan);
-    font-family: 'Space Mono', monospace;
+  content: " ";
+  height: 30px;
+  width: 30px;
+  background-image: url("./images/icon-person.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 45%;
+  position: absolute;
+  top: 45px;
+  left: 16px;
+  color: var(--light-grayish-cyan);
+  font-family: "Space Mono", monospace;
 }
 
 .form-control.error .input-num {
-    border: solid 1px red;
+  border: solid 1px red;
 }
 
 .form-control.error .label-num::after {
-    content: "Can't be zero";
-    color: red;
-    font-size: 0.5rem;
-    margin-left: 60px;
+  content: "Can't be zero";
+  color: red;
+  font-size: 0.5rem;
+  margin-left: 60px;
 }
 
 .form-control.success .input {
-    border: solid 2px var(--strong-cyan);
+  border: solid 2px var(--strong-cyan);
+}
+
+.result-container {
+  background-color: var(--very-dark-cyan);
+  color: var(--white);
+  padding: 30px 20px 20px 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.tip-heading {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.tip-paragraph {
+  color: var(--grayish-cyan);
+  font-size: 0.6rem;
+  margin: 0;
+}
+
+.reset-button {
+  background-color: var(--strong-cyan);
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  font-family: "Space Mono", monospace;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.result1 {
+  position: absolute;
+  right: 25px;
+  top: 35px;
+  color: var(--strong-cyan);
+}
+.result2 {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  color: var(--strong-cyan);
 }
 
 .attribution {
-    font-size: 11px;
-    text-align: center;
+  font-size: 11px;
+  text-align: center;
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+  color: hsl(228, 45%, 44%);
 }
