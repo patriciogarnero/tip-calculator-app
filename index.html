@@ -30,11 +30,11 @@
         <img class="logo" src="./images/logo.svg" alt="logo" />
         <div class="calculator">
           <div class="calculation-container">
-            <form class="form-control" action="/">
+            <form id="form" class="form-control" action="/">
               <div class="position">
-                <label class="label" for="bill">Bill</label>
+                <label class="label label-bill" for="bill">Bill</label>
                 <span class="dollar"
-                  ><input class="input" type="text" name="bill"
+                  ><input class="input input-bill" type="text" name="bill"
                 /></span>
               </div>
               <label class="label margin-top" for="select-tip"
@@ -42,32 +42,47 @@
               >
               <div id="id-select-tip">
                 <label
-                  ><input type="radio" name="select-tip" value="5" /><span
-                    >5%</span
-                  ></label
+                  ><input
+                    class="tip-button"
+                    type="radio"
+                    name="select-tip"
+                    value="5"
+                  /><span>5%</span></label
                 >
                 <label
-                  ><input type="radio" name="select-tip" value="10" /><span
-                    >10%</span
-                  ></label
+                  ><input
+                    class="tip-button"
+                    type="radio"
+                    name="select-tip"
+                    value="10"
+                  /><span>10%</span></label
                 >
                 <label
-                  ><input type="radio" name="select-tip" value="15" /><span
-                    >15%</span
-                  ></label
+                  ><input
+                    class="tip-button"
+                    type="radio"
+                    name="select-tip"
+                    value="15"
+                  /><span>15%</span></label
                 >
                 <label
-                  ><input type="radio" name="select-tip" value="25" /><span
-                    >25%</span
-                  ></label
+                  ><input
+                    class="tip-button"
+                    type="radio"
+                    name="select-tip"
+                    value="25"
+                  /><span>25%</span></label
                 >
                 <label
-                  ><input type="radio" name="select-tip" value="50" /><span
-                    >50%</span
-                  ></label
+                  ><input
+                    class="tip-button"
+                    type="radio"
+                    name="select-tip"
+                    value="50"
+                  /><span>50%</span></label
                 >
                 <input
-                  class="input"
+                  class="input custom-tip"
                   name="select-tip"
                   type="number"
                   placeholder="Custom"
@@ -78,7 +93,10 @@
                   >Number of People</label
                 >
                 <span class="person"
-                  ><input class="input input-num" type="number"
+                  ><input
+                    id="person-count"
+                    class="input input-num"
+                    type="number"
                 /></span>
               </div>
             </form>
@@ -87,28 +105,25 @@
             <div class="margin-bottom">
               <h6 class="tip-heading">Tip Amount</h6>
               <p class="tip-paragraph">/ person</p>
-              <span class="result1">$ 4.24</span>
+              <span class="result1">$ 0</span>
             </div>
             <div class="margin-bottom position">
               <h6 class="tip-heading">Total</h6>
               <p class="tip-paragraph">/ person</p>
-              <span class="result2">$ 4.24</span>
+              <span class="result2">$ 0</span>
             </div>
-            <form action="/">
-              <button class="reset-button" type="submit">RESET</button>
-            </form>
+            <button class="reset-button" disabled="true">RESET</button>
           </div>
         </div>
       </div>
     </main>
-    <footer>
-      <div class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by
-        <a href="https://github.com/patriciogarnero">Patricio Garnero</a>.
-      </div>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://github.com/patriciogarnero">Patricio Garnero</a>.
     </footer>
+    <script src="./index.js"></script>
   </body>
 </html>

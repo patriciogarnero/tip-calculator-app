@@ -16,10 +16,6 @@ body {
   background-color: var(--light-grayish-cyan);
 }
 
-main {
-  height: 90vh;
-}
-
 .container {
   max-width: 400px;
   box-sizing: border-box;
@@ -58,7 +54,8 @@ main {
   display: block;
   box-sizing: border-box;
   background-color: var(--very-light-grayish-cyan);
-  border: 0;
+  border: 2px;
+  background-color: var(--very-light-grayish-cyan);
   width: 100%;
   border-radius: 5px;
   font-family: "Space Mono", monospace;
@@ -81,7 +78,7 @@ main {
   background-position: center;
   background-size: 45%;
   position: absolute;
-  top: 45px;
+  top: 47px;
   left: 16px;
   color: var(--light-grayish-cyan);
   font-family: "Space Mono", monospace;
@@ -153,11 +150,16 @@ input[type="number"] {
   content: "Can't be zero";
   color: red;
   font-size: 0.5rem;
-  margin-left: 60px;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  margin-top: -1px;
 }
 
-.form-control.success .input {
+.success {
   border: solid 2px var(--strong-cyan);
+  padding-right: 18px;
+  margin: -2px 0;
 }
 
 .result-container {
@@ -186,8 +188,12 @@ input[type="number"] {
   width: 100%;
   border-radius: 5px;
   font-family: "Space Mono", monospace;
-  font-size: 1rem;
+  font-size: 0.9rem;
   margin-top: 10px;
+}
+
+.reset-button:disabled {
+  background-color: var(--grayish-cyan);
 }
 
 .result1 {
@@ -206,6 +212,7 @@ input[type="number"] {
 .attribution {
   font-size: 11px;
   text-align: center;
+  margin-top: 20px;
 }
 
 .attribution a {
