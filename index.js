@@ -60,7 +60,7 @@ function updateResult() {
     tipPerPerson = (billValue * tipPercentage) / 100 / people;
     const tipPerPersonRounded = Math.round(tipPerPerson * 100) / 100;
     resultPerPerson.innerHTML = "$ " + tipPerPersonRounded;
-    resultTotal = billValue / people + tipPerPersonRounded;
+    resultTotal = Math.round(billValue / people + tipPerPersonRounded) / 100;
     totalPerPerson.innerHTML = "$ " + resultTotal;
   }
 
