@@ -218,3 +218,43 @@ input[type="number"] {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
+@media (min-width: 1200px) {
+  body {
+    height: 80vh;
+  }
+
+  .container {
+    max-width: 800px;
+  }
+
+  .calculator {
+    display: flex;
+    padding: 30px;
+  }
+  .calculation-container {
+    width: 55%;
+    margin-right: 10px;
+  }
+  .result-container {
+    width: 45%;
+    margin: 0 0 0 10px;
+    padding: 45px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .reset-button {
+    justify-self: flex-end;
+  }
+  #id-select-tip {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px 10px;
+  }
+
+  #id-select-tip span {
+    width: 100px;
+  }
+}

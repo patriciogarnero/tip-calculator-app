@@ -37,6 +37,8 @@ resetButton.addEventListener("click", () => {
   personInput.value = "";
   personInput.classList.remove("success");
   resetButton.disabled = true;
+  resultPerPerson.innerHTML = "0";
+  totalPerPerson.innerHTML = "0";
 });
 
 //Calculating & updating function
@@ -60,7 +62,8 @@ function updateResult() {
     tipPerPerson = (billValue * tipPercentage) / 100 / people;
     const tipPerPersonRounded = Math.round(tipPerPerson * 100) / 100;
     resultPerPerson.innerHTML = "$ " + tipPerPersonRounded;
-    resultTotal = Math.round(billValue / people + tipPerPersonRounded) / 100;
+    resultTotal =
+      Math.round((billValue / people + tipPerPersonRounded) * 100) / 100;
     totalPerPerson.innerHTML = "$ " + resultTotal;
   }
 
