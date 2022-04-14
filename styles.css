@@ -196,6 +196,14 @@ input[type="number"] {
   background-color: var(--grayish-cyan);
 }
 
+.reset-button:hover {
+  cursor: pointer;
+}
+
+.reset-button:disabled:hover {
+  cursor: default;
+}
+
 .result1 {
   position: absolute;
   right: 25px;
