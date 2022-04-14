@@ -225,7 +225,7 @@ input[type="number"] {
   }
 
   .container {
-    max-width: 800px;
+    max-width: 750px;
   }
 
   .calculator {
@@ -233,11 +233,11 @@ input[type="number"] {
     padding: 30px;
   }
   .calculation-container {
-    width: 55%;
-    margin-right: 10px;
+    width: 50%;
+    margin-right: 30px;
   }
   .result-container {
-    width: 45%;
+    width: 40%;
     margin: 0 0 0 10px;
     padding: 45px 20px 20px 20px;
     display: flex;
@@ -245,16 +245,34 @@ input[type="number"] {
   }
 
   .reset-button {
-    justify-self: flex-end;
+    margin-top: auto;
   }
+
   #id-select-tip {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 10px 10px;
   }
+  .input {
+    font-size: 0.75rem;
+  }
 
   #id-select-tip span {
-    width: 100px;
+    width: 90px;
+    font-size: 0.75rem;
+  }
+
+  .dollar::before {
+    top: 43px;
+  }
+  .person::before {
+    top: 43px;
+  }
+  .result1 {
+    font-size: 1.3rem;
+  }
+  .result2 {
+    font-size: 1.3rem;
   }
 }
